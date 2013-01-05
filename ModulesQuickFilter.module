@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ProcessWire Module Sections Collapse
+ * ProcessWire Module Quick Filter
  *
  *
  * ProcessWire 2.x
@@ -11,8 +11,6 @@
  * http://www.processwire.com
  * http://www.ryancramer.com
  *
- * created: 08/27/2011
- * author: Philipp Urlich, philipp@urlich.ch
  *
  */
 
@@ -22,18 +20,12 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
         'collapsed' => '1'
     );
 
-	/**
-	 * getModuleInfo is a module required by all modules to tell ProcessWire about them
-	 *
-	 * @return array
-	 *
-	 */
 	public static function getModuleInfo() {
 
 		return array(
 
 			'title' => 'Modules Quick Filter',
-			'version' => 120,
+			'version' => 121,
 			'summary' => 'Allows a user to quicly drill down modules to find the one they want.',
 			'href' => '',
 			'singular' => true,
@@ -43,10 +35,6 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 
 	/**
 	 * Initialize the module
-	 *
-	 * ProcessWire calls this when the module is loaded. For 'autoload' modules, this will be called
-	 * when ProcessWire's API is ready. As a result, this is a good place to attach hooks.
-	 *
 	 */
 	public function init() {
 		$this->addHookAfter('ProcessModule::execute', $this, 'startEngine');
@@ -80,8 +68,6 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 		$quick_filter_fields .=						'<div class="ui-widget-content" style="overflow: hidden;">';
 		$quick_filter_fields .=							'<select class="InputfieldMaxWidth" name="quick_filter_category" id="quick_filter_category">';
 		$quick_filter_fields .= 								'<option value="">'.__("All").'</option>';
-
-
 		$quick_filter_fields .=							'</select>';
 		$quick_filter_fields .=						'</div>';
 		$quick_filter_fields .=					'</li>';
@@ -95,7 +81,6 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 		$event->return = $quick_filter_fields . $event->return;
 	}
 
-
     static public function getModuleConfigInputfields(array $data) {
         $data = array_merge(self::$defaults, $data);
 
@@ -108,9 +93,6 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
         $field->label = "Collapsed By Default?";
         $fields->append($field);
 
-
         return $fields;
     }
-
-
 }
