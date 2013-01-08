@@ -25,7 +25,7 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 		return array(
 
 			'title' => 'Modules Quick Filter',
-			'version' => 121,
+			'version' => 122,
 			'summary' => 'Allows a user to quicly drill down modules to find the one they want.',
 			'href' => '',
 			'singular' => true,
@@ -65,7 +65,7 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 		$quick_filter_fields .= 					'</li>';
 		$quick_filter_fields .=					'<li class="Inputfield InputfieldText ui-widget InputfieldColumnWidth" style="width: 49%;">';
 		$quick_filter_fields .=						'<label class="ui-widget-header InputfieldStateToggle" for="Inputfield_headline">'.__("By Category").'</label>';
-		$quick_filter_fields .=						'<div class="ui-widget-content" style="overflow: hidden;">';
+		$quick_filter_fields .=						'<div class="ui-widget-content InputfieldSelect" style="overflow: hidden;">';
 		$quick_filter_fields .=							'<select class="InputfieldMaxWidth" name="quick_filter_category" id="quick_filter_category">';
 		$quick_filter_fields .= 								'<option value="">'.__("All").'</option>';
 		$quick_filter_fields .=							'</select>';
