@@ -36,7 +36,7 @@ $(function(){
 			$h2s.hide();
 			$tables.hide();
 			$trs.each(function(){
-				$(this).children('td:first:contains('+match+')').closest('tr').clone().prependTo($results_table);
+				$(this).children('td:first:contains('+match+')').closest('tr').clone(true, true).prependTo($results_table);
 			});
 		}
 		else{
