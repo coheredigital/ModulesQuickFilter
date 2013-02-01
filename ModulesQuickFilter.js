@@ -1,16 +1,21 @@
 
 
 $(function(){
+
+
 	// filter inputs
 	var $filter_title = $('#quick_filter_title');
 	var $filter_category = $('#quick_filter_category');
 
 
 	// elements that get filtered
+	var $modules_form = $('#modules_form');
 	var $tables = $('#modules_form table');
 	var $trs = $('#modules_form tr');
 	var $h2s = $('#modules_form h2');
 	var $ths = $('#modules_form th');
+
+	$modules_form.prepend('<div style="display: none;" id="quick_filter_results"><h2 id="quick_filter_results_heading">Results</h2><table class="AdminDataTable AdminDataList AdminDataTableSortable"><thead><tr><th class="header">Module</th><th class="header">Version</th><th class="header">Summary</th></tr></thead><tbody></tbody></table></div>');
 
 	// results elements
 	var $results = $("#quick_filter_results");

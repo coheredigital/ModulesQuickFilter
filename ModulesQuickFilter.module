@@ -25,7 +25,7 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 		return array(
 
 			'title' => 'Modules Quick Filter',
-			'version' => 122,
+			'version' => 123,
 			'summary' => 'Allows a user to quicly drill down modules to find the one they want.',
 			'href' => '',
 			'singular' => true,
@@ -77,7 +77,7 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 		$quick_filter_fields .=			'</li>';
 		$quick_filter_fields .=		'</ul>';
 		$quick_filter_fields .=	'</div>';
-		$quick_filter_fields .=	'<div style="display: none;" id="quick_filter_results"><h2 id="quick_filter_results_heading">Results</h2><table class="AdminDataTable AdminDataList AdminDataTableSortable"><thead><tr><th class="header">Module</th><th class="header">Version</th><th class="header">Summary</th></tr></thead><tbody></tbody></table></div>';
+		// $quick_filter_fields .=	'<div style="display: none;" id="quick_filter_results"><h2 id="quick_filter_results_heading">Results</h2><table class="AdminDataTable AdminDataList AdminDataTableSortable"><thead><tr><th class="header">Module</th><th class="header">Version</th><th class="header">Summary</th></tr></thead><tbody></tbody></table></div>';
 		$event->return = $quick_filter_fields . $event->return;
 	}
 
