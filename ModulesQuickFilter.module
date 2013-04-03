@@ -71,8 +71,9 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 		$quick_filter_fields .=							'</select>';
 		$quick_filter_fields .=						'</div>';
 		$quick_filter_fields .=					'</li>';
-		$quick_filter_fields .=				'<p class="notes" style="clear: both;">'.__("Using one filter type will override the results from the other.").'</p>';
 		$quick_filter_fields .=				'</ul>';
+		$quick_filter_fields .=				'<p class="notes" style="clear: both;">'.__("Using one filter type will override the results from the other.").'</p>';
+
 		$quick_filter_fields .=				'</div>';
 		$quick_filter_fields .=			'</li>';
 		$quick_filter_fields .=		'</ul>';
