@@ -25,7 +25,7 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 		return array(
 
 			'title' => 'Modules Quick Filter',
-			'version' => 123,
+			'version' => 124,
 			'summary' => 'Allows a user to quicly drill down modules to find the one they want.',
 			'href' => '',
 			'singular' => true,
@@ -56,6 +56,8 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 		$quick_filter_fields .= 			'<li class="Inputfield '.($this->collapsed ?'InputfieldStateCollapsed':'').' InputfieldFieldset ui-widget" id="quick_filter_group">';
 		$quick_filter_fields .= 				'<label class="ui-widget-header InputfieldStateToggle">'.__("Filter Modules").'</label>';
 		$quick_filter_fields .= 				'<div class="ui-widget-content">';
+		$quick_filter_fields .=				'<p class="description" style="clear: both;">'.__("Using one filter type will override the results from the other.").'</p>';
+
 		$quick_filter_fields .= 				'<ul class="Inputfields ui-helper-clearfix">';
 		$quick_filter_fields .=					'<li class="Inputfield ui-widget InputfieldColumnWidth InputfieldColumnWidthFirst" style="width: 50%;">';
 		$quick_filter_fields .= 						'<label class="ui-widget-header InputfieldStateToggle" for="Inputfield_title">'.__("By Name").'</label>';
@@ -72,7 +74,6 @@ class ModulesQuickFilter extends WireData implements Module, ConfigurableModule 
 		$quick_filter_fields .=						'</div>';
 		$quick_filter_fields .=					'</li>';
 		$quick_filter_fields .=				'</ul>';
-		$quick_filter_fields .=				'<p class="notes" style="clear: both;">'.__("Using one filter type will override the results from the other.").'</p>';
 
 		$quick_filter_fields .=				'</div>';
 		$quick_filter_fields .=			'</li>';
